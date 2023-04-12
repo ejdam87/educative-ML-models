@@ -1,6 +1,6 @@
 # Linear regression
 
-![Showcase](https://github.com/ejdam87/linear-regression/blob/master/3D.png)
+![Showcase](https://github.com/ejdam87/educative-ML-models/blob/main/linear-models/3D.png)
 
 This repository contains:
 - an implementation of **linear regression mode**
