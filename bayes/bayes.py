@@ -9,16 +9,15 @@ Label = TypeVar( "Label" )
 class BayesClassifier:
 
     """
-    P( class | given features )
+    Selects label with maximal probability: P( label | given features )
     """
     def __init__( self ) -> None:
         self.probs = {}
 
-    def get_prob( self, label: Label, sample: fr.Sample ) -> float:
-        return self.probs[ ( label, sample ) ]
-
     def learn( self, data: fr.Frame, labels: fr.Frame ) -> None:
-
+        """
+        Calculates P( label | given features )
+        """
         counts = defaultdict(int)
         row_count = defaultdict(int)
 
