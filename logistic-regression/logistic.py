@@ -33,6 +33,23 @@ class LogisticRegression:
         return 0 if self.get_prob( sample ) < self.treshold else 1
 
     def learn( self, samples: list[ Vector ], labels: list[ Label ] ) -> None:
-        epochs = 100000
+        epochs = 10000
         for _ in range( epochs ):
             self.weights = self.weights - self.learning_rate * self.error_gradient( samples, labels )
+
+
+samples = [
+            Vector( [0] ),
+            Vector( [0.5] ),
+            Vector( [1] ),
+            Vector( [0.4] ),
+
+            Vector( [11] ),
+            Vector( [12] ),
+            Vector( [13] )
+          ]
+
+labels = [ 0, 0, 0, 0, 1, 1, 1 ]
+
+lr = LogisticRegression( 1 )
+lr.learn( samples, labels )
